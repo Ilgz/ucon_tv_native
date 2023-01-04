@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_reg"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_height="250dp"
+        android:layout_width="400dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:alpha="0.7"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Авторизация"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Введите код для входа"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/text_otp"
+                android:layout_width="wrap_content"
+                android:maxLength="7"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content"
+                android:hint="000 000"
+                android:textColor="@color/black"
+                android:focusable="false"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="20dp"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_yellow"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10sp"
+                    android:focusable="true"
+                    android:onClick="onClickForNumbers"
+                    android:layout_marginEnd="10sp"
+                    android:text="1"/>
+                <TextView
+                    android:id="@+id/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:onClick="onClickForNumbers"
+
+                    android:textColor="@color/black_yellow"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:text="2"/> <TextView
+                android:id="@+id/three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_yellow"
+                android:textSize="18sp"
+                android:focusable="true"
+                android:onClick="onClickForNumbers"
+
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:text="3"/> <TextView
+                android:id="@+id/four"
+                android:layout_width="wrap_content"
+                android:focusable="true"
+                android:onClick="onClickForNumbers"
+
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_yellow"
+                android:textSize="18sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:text="4"/> <TextView
+                android:id="@+id/five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_yellow"
+                android:textSize="18sp"
+                android:focusable="true"
+                android:onClick="onClickForNumbers"
+
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:text="5"/> <TextView
+                android:id="@+id/six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_yellow"
+                android:focusable="true"
+                android:onClick="onClickForNumbers"
+
+                android:textSize="18sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:text="6"/> <TextView
+                android:id="@+id/seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_yellow"
+                android:focusable="true"
+                android:onClick="onClickForNumbers"
+
+                android:textSize="18sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:text="7"/> <TextView
+                android:id="@+id/eight"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_yellow"
+                android:textSize="18sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp"
+                android:onClick="onClickForNumbers"
+
+                android:text="8"/>
+                <TextView
+                    android:id="@+id/nine"
+                    android:focusable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_yellow"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="onClickForNumbers"
+
+                    android:text="9"/>
+                <TextView
+                    android:id="@+id/zero"
+                    android:focusable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_yellow"
+                    android:textSize="18sp"
+                    android:layout_marginStart="10sp"
+                    android:onClick="onClickForNumbers"
+
+                    android:layout_marginEnd="10sp"
+                    android:text="0"/>
+                <ImageView
+                    android:id="@+id/backSpace"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginEnd="10sp"
+                    android:onClick="onClickForNumbers"
+                    android:focusable="true"
+                    android:src="@drawable/ic_backspace"/>
+
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/buttonContininue"
+                android:layout_width="100dp"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:textAlignment="center"
+                android:background="@drawable/button_background"
+                android:textColor="@color/white_black"
+                android:paddingVertical="8dp"
+                android:text="Далее"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

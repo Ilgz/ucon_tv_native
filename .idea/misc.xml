@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/.gradle/caches/transforms-2/files-2.1/ef0f6a4afe759eafd4cbabb4ef31e3bc/jetified-exoplayer-ui-2.7.3/res/layout/exo_playback_control_view.xml" value="0.3621621621621622" />
+        <entry key="..\:/Users/User/.gradle/caches/transforms-2/files-2.1/ef0f6a4afe759eafd4cbabb4ef31e3bc/jetified-exoplayer-ui-2.7.3/res/layout/exo_player_control_view.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/User/.gradle/caches/transforms-2/files-2.1/ef0f6a4afe759eafd4cbabb4ef31e3bc/jetified-exoplayer-ui-2.7.3/res/layout/exo_simple_player_view.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/blue_to_yellow.xml" value="0.1609375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/button_shape.xml" value="0.1609375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/button_shape_white.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/button_shape_white_not_round.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/default_indicator.xml" value="0.3375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/for_titles_background.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/fstate_yellow_d_white.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/fullscreen_selector.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/gradient.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_arrow_down.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_arrow_up.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_back_button.xml" value="0.1609375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_back_space_white.xml" value="0.1609375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_backspace.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.3375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_baseline_arrow_back_for_profile.xml" value="0.1875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_baseline_signal_wifi_off_24.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_play.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_play_selected.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/ic_television__2_.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/pause_selector.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/play_selector.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/profile_button_background.xml" value="0.1609375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/recycler.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/roundik.xml" value="0.3900900900900901" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/selected_indicator.xml" value="0.165625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/slide_selector.xml" value="0.20989583333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/stories_rounder.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/trailers_circle.xml" value="0.103125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/trailers_circle_selector.xml" value="0.103125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/trailers_circle_unfocus.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/trans_white.xml" value="0.1609375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/drawable/white_black.xml" value="0.1609375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-hdpi/activity_composer.xml" value="0.31328125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-hdpi/activity_movie_detail.xml" value="0.31328125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-hdpi/activity_otp.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-hdpi/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-hdpi/fragment_profile.xml" value="0.75" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-land/activity_movie_detail.xml" value="0.9" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-large/custom_controller.xml" value="0.146875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-large/tele_movie_detail.xml" value="0.2109375" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-mdpi/beranda_fragment.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-sw480dp/card_item.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout-xxxhdpi/activity_register.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_anniversary_widow.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_change_server_class.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_composer.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_devices.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_exhile.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_logo_.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_movie_detail.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_otp.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_pokaz_first.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_register.xml" value="0.33666666666666667" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/activity_stories_player.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/alert_dialog.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/beranda_fragment.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/bottomnavlay.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/card_item.xml" value="0.67" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/category_list.xml" value="0.5" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/controller.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/custom_controller.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/fragment.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/fragment_tele.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/item_move.xml" value="0.12960526315789472" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/item_movie.xml" value="0.67" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/item_tele.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/list_group.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/list_item.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/main_content_wrapper.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/nav_header.xml" value="0.5" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/nav_menu_item.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/nav_submenu_item.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/notifikasi_fragment.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/row.xml" value="0.2826492537313433" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/slide_item.xml" value="0.5844444444444444" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/spinner_dropdown_item.xml" value="0.3" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/spinner_item.xml" value="0.3" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/stories_controller.xml" value="0.2515625" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/tele_movie_detail.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/teman_dekat_fragment.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/teman_dekat_sekali_fragment.xml" value="0.1578125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/layout/tutorial_dialog.xml" value="0.22" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/menu/bottom_menu.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/menu/menu.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/menu/submenu.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/Player2/app/src/main/res/menu/tele_menu.xml" value="0.10052083333333334" />
+        <entry key="..\:/Users/User/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_spinner_dropdown_item.xml" value="0.3" />
+        <entry key="..\:/Users/User/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_spinner_item.xml" value="0.3621621621621622" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,112 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'kotlin-android'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86' ,'x86_64'
+        }
+        applicationId "com.techno.player2"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 30
+        versionName "3.9.7"
+        vectorDrawables.useSupportLibrary = true
+        resConfigs "ru"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        lintOptions {
+            checkReleaseBuilds false
+        }
+        signingConfig signingConfigs.debug
+    }
+
+    buildTypes {
+        release {
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+
+        }
+    }
+    viewBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    api 'com.github.instacart.truetime-android:library:3.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation platform('com.google.firebase:firebase-bom:26.3.0')
+    implementation 'com.google.firebase:firebase-database-ktx:20.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    ext {
+        supportLibraryVersion = '27.1.0'
+    }
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'com.google.firebase:firebase-analytics:19.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'org.jsoup:jsoup:1.13.1'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation platform('com.google.firebase:firebase-bom:28.1.0')
+    implementation 'androidx.webkit:webkit:1.4.0'
+    //implementation 'com.google.android.exoplayer:exoplayer-core:2.7.3'
+    //implementation 'com.google.android.exoplayer:exoplayer-ui:2.7.3'
+    implementation 'androidx.leanback:leanback:1.0.0'
+    implementation 'com.google.guava:guava:14.0.1'
+    implementation "org.videolan.android:libvlc-all:3.3.9"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

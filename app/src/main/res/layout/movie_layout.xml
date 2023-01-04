@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:focusable="false"
+    android:padding="10dp"
+    android:id="@+id/whole_side"
+    android:background="@drawable/background_home"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/left_side"
+        android:layout_width="200dp"
+        android:orientation="vertical"
+        android:paddingEnd="20dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/movie_play_img"
+            android:layout_width="200dp"
+             android:scaleType="centerCrop"
+            android:paddingBottom="10dp"
+            android:layout_height="300dp"/>
+        <TextView
+            android:id="@+id/movie_play_title"
+            android:textColor="@color/yellow"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/movie_play_details"
+            android:textColor="@color/for_titles"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            >
+            <ImageView
+                android:scaleType="centerCrop"
+                android:layout_width="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/movie_control_guide"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="0dp"
+       android:layout_weight="1"
+       android:orientation="vertical"
+       android:layout_height="match_parent">
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:id="@+id/movie_play_player"
+           android:layout_width="match_parent"
+           android:layout_height="300dp">
+           <org.videolan.libvlc.util.VLCVideoLayout
+               android:id="@+id/videoLayout"
+
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"/>
+           <ProgressBar
+               android:id="@+id/progressBar3"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               style="?android:attr/progressBarStyle"
+               android:indeterminate="true"
+               android:indeterminateTintMode="src_atop"
+               android:indeterminateTint="@color/yellow"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+           <ImageView
+               android:id="@+id/paused_icon"
+               android:visibility="invisible"
+               android:src="@drawable/ic_baseline_pause_24"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:elevation="12dp"
+               android:background="@drawable/image_shadow"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               />
+           <LinearLayout
+               android:id="@+id/seekBarContainer"
+               android:layout_width="match_parent"
+               app:layout_constraintRight_toRightOf="parent"
+               app:layout_constraintLeft_toLeftOf="parent"
+               app:layout_constraintBottom_toBottomOf="@+id/videoLayout"
+               android:orientation="horizontal"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/movie_position_indicator"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="00:00"
+                   android:paddingStart="3dp"
+                   android:textColor="@color/white"
+                   android:paddingHorizontal="3dp"
+                   />
+               <androidx.appcompat.widget.AppCompatSeekBar
+                   android:id="@+id/seekBar"
+                   android:layout_weight="1"
+                   android:progressTint="@color/yellow"
+                   android:focusable="false"
+
+                   android:progressBackgroundTint="@color/lb_grey"
+                   android:thumbTint="@color/yellow"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   />
+               <TextView
+                   android:id="@+id/movie_length_indicator"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="00:00"
+                   android:paddingEnd="3dp"
+                   android:textColor="@color/white"
+                   />
+
+           </LinearLayout>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+       <TextView
+           android:paddingTop="5dp"
+           android:id="@+id/text_view_movie"
+           android:textColor="@color/for_titles"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+   </LinearLayout>
+
+
+
+
+</LinearLayout>

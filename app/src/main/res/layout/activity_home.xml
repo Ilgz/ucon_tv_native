@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/background_home"
+    tools:context=".main_windows.MainActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:gravity="center_vertical"
+             android:layout_marginLeft="20dp"
+             style="@style/myTitleStyle"
+             android:textColor="@color/white"
+             android:text="Ucon TV"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/toolbar_search"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_search"
+            />
+        <ImageView
+            android:id="@+id/toolbar_profile"
+            android:focusable="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_profile"
+            />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+       >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    >
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slider"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+    <TextView
+        android:id="@+id/tv_premiers"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Премьеры"
+        android:onClick="goToCategory"
+        android:layout_marginTop="16dp"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:textColor="#ff3cdfff"
+        android:background="@drawable/background_transparent_yellow"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_premiers"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_channels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:text="Телеканалы"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:textColor="#ff3cdfff"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="150dp"
+            android:scaleType="fitXY"
+            android:focusable="true"
+            android:padding="3dp"
+            android:onClick="goToCategoryHD"
+            android:background="@drawable/background_transparent_yellow"
+            android:src="@drawable/hd_films"
+            android:layout_height="match_parent"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_channels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_cartoons"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Мультфильмы"
+        android:textAllCaps="true"
+        android:layout_marginTop="16dp"
+        android:onClick="goToCategory"
+
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:textColor="#ff3cdfff"
+        android:background="@drawable/background_transparent_yellow"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cartoons"
+            android:layout_width="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_serials"
+        android:focusable="true"
+        android:onClick="goToCategory"
+
+        android:focusableInTouchMode="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сериалы"
+        android:textAllCaps="true"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:layout_marginStart="16dp"
+        android:textColor="#ff3cdfff"
+        android:background="@drawable/background_transparent_yellow"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_serials"
+
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

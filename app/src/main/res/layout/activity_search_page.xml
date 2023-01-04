@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/pokaz_background"
+    android:layout_height="match_parent"
+    tools:context=".main_windows.SearchPage">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize">
+
+        <ImageView
+
+            android:layout_gravity="center_vertical"
+            android:layout_width="24dp"
+            android:focusable="false"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"/>
+        <EditText
+            android:id="@+id/et_search"
+            android:textColorHint="@color/lb_grey"
+            android:layout_width="0dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:imeOptions="actionDone"
+            android:hint="Поиск..."
+            android:singleLine="true"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:focusable="true"
+            android:layout_marginHorizontal="15dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_close_24"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_search"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_marginTop="100dp"
+                style="@style/myTitleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Введите текст для поиска."
+                android:textSize="32sp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

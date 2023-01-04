@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@drawable/background_home"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:padding="6dp"
+android:layout_marginStart="15dp"
+            android:focusable="true"
+            android:layout_width="36dp"
+            android:background="@drawable/back_button_background"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="36dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:background="@drawable/profile_item_backgound"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/profile_tv_phone"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:text="0709872197"
+            style="@style/myTitleStyle"
+            android:paddingVertical="8dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_background"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/profile_tv_balance"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/white"
+                android:text="Ваш баланс 0 сом"
+                android:textSize="18sp"
+                android:paddingVertical="8dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_background"
+                android:textAlignment="center"/>
+            <View
+                android:layout_width="10dp"
+                android:layout_height="1dp"/>
+            <TextView
+                android:id="@+id/exit_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textColor="@color/white"
+                android:focusable="true"
+                android:text="Выйти"
+                android:textSize="18sp"
+                android:paddingVertical="8dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:textAlignment="center"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Поддержка"
+            android:textAlignment="center"
+            style="@style/myTitleStyle"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/support_text"
+            android:textSize="18sp"
+
+            style="@style/myTitleStyle"/>
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/support_number"
+            android:textSize="18sp"
+             android:drawablePadding="5dp"
+            style="@style/myTitleStyle"
+            app:drawableLeftCompat="@drawable/whats_app" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/change_player"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="80dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:focusable="true"
+            android:textAllCaps="true"
+            android:text="Текущий плеер:NATIVE"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:textAlignment="center"/>
+    </LinearLayout>
+</LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/profile_item_backgound"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_height="match_parent"
+        android:text="@string/support_policy"/>
+    </LinearLayout>
+
+</LinearLayout>
