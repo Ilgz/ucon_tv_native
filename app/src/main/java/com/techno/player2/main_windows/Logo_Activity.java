@@ -39,7 +39,7 @@ public class Logo_Activity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         requestQueue = Volley.newRequestQueue(this);
         init();
-        int hls = sharedPreferences.getInt("hls", 1);
+        int hls = sharedPreferences.getInt("vps", 1);
         String url = "https://ucontv.com.kg/info/update_links/";
         if (hls == 2) {
             url = "https://ucontv.com.kg/info/update_links_2/";

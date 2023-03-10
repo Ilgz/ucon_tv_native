@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
@@ -35,6 +37,7 @@ import com.techno.player2.R;
 import com.techno.player2.adapters.MovieAdapter;
 import com.techno.player2.adapters.SliderPageAdapter;
 import com.techno.player2.adapters.TeleAdapter;
+import com.techno.player2.auxi.Xhelper;
 import com.techno.player2.custom_interfaces.MovieItemClickList;
 import com.techno.player2.data_source.DataSourceTVChannelsAll;
 import com.techno.player2.models.Movie;
@@ -257,23 +260,31 @@ rvCartoons.setAdapter(movieAdapter);
 
     @Override
     public void OnMovieClick(Movie movie, ImageView movieImageView) {
-        Intent intent=new Intent(this,MoviePlayPage.class);
-        intent.putExtra("title",movie.getTitle());
-        intent.putExtra("poster",movie.getThumbnail());
-        intent.putExtra("details",movie.getDetails());
-        intent.putExtra("siteLink",movie.getSiteLink());
-        startActivity(intent);
+                SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.k_shared),MODE_PRIVATE);
+        boolean status = sharedPreferences.getBoolean("access", false);
+        if (!status) {
+            new Xhelper().DialogBuild(this);
+        }
+        else{
+            Intent intent=new Intent(this,MoviePlayPage.class);
+            intent.putExtra("title",movie.getTitle());
+            intent.putExtra("poster",movie.getThumbnail());
+            intent.putExtra("details",movie.getDetails());
+            intent.putExtra("siteLink",movie.getSiteLink());
+            startActivity(intent);
+        }
+
     }
-//      @Override
-//    public void onBackPressed() {
-//            if (doubleBackToExitPressedOnce) {
-//                super.onBackPressed();
-//                return;
-//            }
-//            this.doubleBackToExitPressedOnce = true;
-//            Toast.makeText(this, "Нажмите кнопку \"Назад\" еще раз,чтобы выйти из приложения.", Toast.LENGTH_LONG).show();
-//            new Handler(Looper.getMainLooper()).postDelayed(() -> doubleBackToExitPressedOnce = false, 2000);
-//    }
+      @Override
+    public void onBackPressed() {
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed();
+                return;
+            }
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, "Нажмите кнопку \"Назад\" еще раз,чтобы выйти из приложения.", Toast.LENGTH_LONG).show();
+            new Handler(Looper.getMainLooper()).postDelayed(() -> doubleBackToExitPressedOnce = false, 2000);
+    }
     void startLoadingDialog() {
         androidx.appcompat.app.AlertDialog.Builder builder = new androidx.appcompat.app.AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
@@ -284,9 +295,16 @@ rvCartoons.setAdapter(movieAdapter);
         alertDialog.show();
     }
     public  void goToCategoryHD(View view){
-        Intent intent=new Intent(this,CategoryPage.class);
-        intent.putExtra("category","Подборки");
-        startActivity(intent);
+        SharedPreferences sharedPreferences=getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
+        int vps=sharedPreferences.getInt("vps", 1);
+        if(vps==1){
+            new android.app.AlertDialog.Builder(this).setTitle("Нет доступа").setMessage("Доступно только для абонентов интернет провайдера UconNet").setPositiveButton("OK", (dialog, which) -> dialog.cancel()).create().show();
+        }else{
+            Intent intent=new Intent(this,CategoryPage.class);
+            intent.putExtra("category","Подборки");
+            startActivity(intent);
+        }
+
     }
     public void goToCategory(View view) {
         TextView textView=findViewById(view.getId());

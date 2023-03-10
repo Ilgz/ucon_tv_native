@@ -187,7 +187,6 @@ public class TeleDetailActivity extends AppCompatActivity {
         });
         findViewById(R.id.sport_list_category).setOnClickListener(v -> {
             allNamesJson(4);
-            System.out.println("sport list");
 
             onBackPressed();
         });
@@ -297,7 +296,7 @@ public class TeleDetailActivity extends AppCompatActivity {
                 Toast.makeText(TeleDetailActivity.this, "Не удалось воспроизвести", Toast.LENGTH_SHORT).show();
                 return true;
             });
-        }, 3000);
+        }, flag?100:1000);
 
     }
 

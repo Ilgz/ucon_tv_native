@@ -1,9 +1,13 @@
 package com.techno.player2.main_windows;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -25,7 +29,9 @@ public class ProfilePage extends AppCompatActivity {
         TextView playerButton=findViewById(R.id.change_player);
         playerButton.setText("Текущий плеер:"+(isVlc?"VLC":"NATIVE"));
         playerButton.setOnClickListener(v ->{
-            new AlertDialog.Builder(this).setTitle("Подтверждение").setMessage("Вы действительно хотите сменить ваш плеер?").setPositiveButton("Да", (dialog1, which) -> changePlayer()).setNegativeButton("Нет", (dialog12, which) -> dialog12.dismiss()).show();
+            ViewDialog dialog= new ViewDialog();
+            dialog.showDialog(this,"Вы действительно хотите сменить ваш плеер?",false);
+            //new AlertDialog.Builder(this).setTitle("Подтверждение").setMessage("Вы действительно хотите сменить ваш плеер?").setPositiveButton("Да", (dialog1, which) -> changePlayer()).setNegativeButton("Нет", (dialog12, which) -> dialog12.dismiss()).show();
         });
         TextView profileTvPhone=findViewById(R.id.profile_tv_phone);
         TextView profileTvBalance=findViewById(R.id.profile_tv_balance);
@@ -35,7 +41,11 @@ public class ProfilePage extends AppCompatActivity {
         imageButton.setOnClickListener(v -> onBackPressed());
         imageButton.requestFocus();
         TextView exit=findViewById(R.id.exit_button);
-        exit.setOnClickListener(v -> new AlertDialog.Builder(this).setTitle("Подтверждение").setMessage("Вы действительно хотите выйти из учетной записи?").setPositiveButton("Да", (dialog1, which) -> exit()).setNegativeButton("Нет", (dialog12, which) -> dialog12.dismiss()).show());
+        exit.setOnClickListener(v -> {
+            ViewDialog dialog= new ViewDialog();
+            dialog.showDialog(this,"Вы действительно хотите выйти из учетной записи?",true);
+            //new AlertDialog.Builder(this).setTitle("Подтверждение").setMessage("Вы действительно хотите выйти из учетной записи?").setPositiveButton("Да", (dialog1, which) -> exit()).setNegativeButton("Нет", (dialog12, which) -> dialog12.dismiss()).show()
+        });
     }
     private void changePlayer(){
         SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
@@ -55,4 +65,30 @@ public class ProfilePage extends AppCompatActivity {
         startActivity(intent);
         finishAffinity();
     }
+    class ViewDialog {
+        public void showDialog(Activity activity, String msg,boolean isExiting){
+            final Dialog dialog = new Dialog(activity);
+            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            dialog.setCancelable(false);
+            dialog.setContentView(R.layout.custom_dialog_layout);
+            TextView text =  dialog.findViewById(R.id.text_dialog);
+            text.setText(msg);
+
+            TextView cancelButton = dialog.findViewById(R.id.dismiss);
+            TextView resumeButton = dialog.findViewById(R.id.resume);
+            cancelButton.setOnClickListener(v -> dialog.dismiss());
+            resumeButton.setOnClickListener(v ->{
+                if(isExiting){
+                    exit();
+                }else{
+                    changePlayer();
+                }
+            });
+
+            dialog.show();
+
+        }
+    }
 }
+
+

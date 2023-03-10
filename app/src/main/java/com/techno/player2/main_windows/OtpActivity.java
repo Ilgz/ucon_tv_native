@@ -48,7 +48,6 @@ public class OtpActivity extends AppCompatActivity {
 
         if (otp.length() < 7) {
             Toast.makeText(this, "Заполните поле полностью", Toast.LENGTH_SHORT).show();
-            btnVerify.setEnabled(true);
         } else if (otp.equals("228 777")) {
             thisMonth();
         } else if (otp.equals("867 174")) {
@@ -59,7 +58,7 @@ public class OtpActivity extends AppCompatActivity {
             editor.putString("status", "trial");
             editor.apply();
             startActivity(new Intent(OtpActivity.this, Logo_Activity.class));
-            finish();
+            finishAffinity();
         } else if (otp.equals("298 839")) {
             SharedPreferences preferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
             SharedPreferences.Editor editor = preferences.edit();
@@ -68,7 +67,7 @@ public class OtpActivity extends AppCompatActivity {
             editor.putString("status", "trial");
             editor.apply();
             startActivity(new Intent(OtpActivity.this, Logo_Activity.class));
-            finish();
+            finishAffinity();
         } else {
             Unpayed();
         }
@@ -189,7 +188,6 @@ public class OtpActivity extends AppCompatActivity {
 
         }, error -> {
             Toast.makeText(OtpActivity.this, "Неверный код", Toast.LENGTH_LONG).show();
-            btnVerify.setEnabled(true);
         });
 
         requestQueue.add(requesting);
@@ -225,7 +223,7 @@ public class OtpActivity extends AppCompatActivity {
         editor.putInt("vps", 1);
         editor.apply();
         startActivity(new Intent(OtpActivity.this, Logo_Activity.class));
-        finish();
+        finishAffinity();
     }
 
 
@@ -256,6 +254,8 @@ public class OtpActivity extends AppCompatActivity {
         otpText = findViewById(R.id.text_otp);
         btnVerify = findViewById(R.id.buttonContininue);
         btnVerify.setOnClickListener(v -> verify());
+        TextView backButton=findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> {finish();});
         otpText.setTransformationMethod(new MyPasswordTransformationMethod());
     }
 

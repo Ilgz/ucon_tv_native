@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.techno.player2.R;
+import com.techno.player2.auxi.Xhelper;
 import com.techno.player2.main_windows.TeleDetailActivity;
 import com.techno.player2.main_windows.TeleDetailActivityVlc;
 import com.techno.player2.models.Movie;
@@ -61,6 +62,11 @@ public class TeleAdapter extends RecyclerView.Adapter<TeleAdapter.MyViewHolder> 
             ImgMovie = itemview.findViewById(R.id.item_tele_img);
             itemview.setOnClickListener(v -> {
                 SharedPreferences sharedPreferences = context.getSharedPreferences(context.getString(R.string.k_shared), MODE_PRIVATE);
+                boolean status = sharedPreferences.getBoolean("access", false);
+                if (!status) {
+                    new Xhelper().DialogBuild(context);
+                }
+                else {
                 Intent intent;
                 if ( sharedPreferences.getBoolean("isVlc", false)){
                     intent = new Intent(context, TeleDetailActivityVlc.class);
@@ -70,6 +76,8 @@ public class TeleAdapter extends RecyclerView.Adapter<TeleAdapter.MyViewHolder> 
 
                 intent.putExtra("cater", mData.get(getAdapterPosition()).getTitle());
                 context.startActivity(intent);
+                }
+
             });
 
         }

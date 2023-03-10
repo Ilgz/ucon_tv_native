@@ -80,7 +80,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
             super(itemview);
             TvTitle = itemview.findViewById(R.id.item_movie_title);
             ImgMovie = itemview.findViewById(R.id.item_movie_img);
-
             itemview.setOnClickListener(v -> movieItemClickList.OnMovieClick(mData.get(getAdapterPosition()), ImgMovie));
 
         }

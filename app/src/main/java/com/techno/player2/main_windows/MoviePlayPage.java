@@ -236,19 +236,25 @@ public class MoviePlayPage extends AppCompatActivity implements EpisodeItemClick
                         for (String i : trashCodesSet) {
                             trashString = trashString.replaceAll(i, "");
                         }
-                        List<String> finalString = Arrays.asList(String.valueOf(StandardCharsets.UTF_8.decode(ByteBuffer.wrap(BaseEncoding.base64().decode(trashString)))).split(","));
-                        String finalLink = "";
-                        for (String element : finalString) {
-                            if (element.split("\\[")[1].split("]")[0].equals("1080p")) {
-                                finalLink = element.split("\\[")[1].split("]")[1].split(" or ")[1];
-                                break;
+                        try{
+                            List<String> finalString = Arrays.asList(String.valueOf(StandardCharsets.UTF_8.decode(ByteBuffer.wrap(BaseEncoding.base64().decode(trashString)))).split(","));
+                            String finalLink = "";
+                            for (String element : finalString) {
+                                if (element.split("\\[")[1].split("]")[0].equals("1080p")) {
+                                    finalLink = element.split("\\[")[1].split("]")[1].split(" or ")[1];
+                                    break;
+                                }
                             }
+                            if (Objects.equals(finalLink, "")) {
+                                finalLink = finalString.get(finalString.size() - 1).split("\\[")[1].split("]")[1].split(" or ")[1];
+                            }
+                            playVideo(finalLink);
+                        }catch (Exception ioException){
+                           playVideo("https://i.imgur.com/7bMqysJ.mp4");
                         }
-                        if (Objects.equals(finalLink, "")) {
-                            finalLink = finalString.get(finalString.size() - 1).split("\\[")[1].split("]")[1].split(" or ")[1];
-                        }
-                        playVideo(finalLink);
-                    } catch (JSONException e) {
+
+                    }
+                    catch (JSONException e) {
                         Log.d("Ilgiz", "error");
                         e.printStackTrace();
                     }
@@ -355,12 +361,12 @@ public class MoviePlayPage extends AppCompatActivity implements EpisodeItemClick
         mMediaPlayer.detachViews();
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mMediaPlayer.release();
-        mLibVLC.release();
-    }
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//        mMediaPlayer.release();
+//        mLibVLC.release();
+//    }
 
     @Override
     public void onEpisodeClick(int season, int episode) {

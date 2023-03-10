@@ -210,7 +210,7 @@ public class ProducerRepo {
     }
     Producer appleTV() {
         return new Producer(
-                "Apple TV",
+                "Подборки: Apple TV",
                 Objects.equals(sectionName, "Премьеры")
                 ? "collections/1416-filmy-apple-tv"
                 : "collections/1146-serialy-apple-tv");
@@ -218,7 +218,7 @@ public class ProducerRepo {
 
     Producer amazon() {
         return new Producer(
-                "Амазон",
+                "Подборки: Amazon",
                 Objects.equals(sectionName, "Премьеры")
                 ? "collections/1417-filmy-amazon"
                 : "collections/831-serialy-amazon");
@@ -226,7 +226,7 @@ public class ProducerRepo {
 
     Producer hbo() {
         return new Producer(
-                "HBO",
+                "Подборки: HBO",
                 Objects.equals(sectionName, "Премьеры")
                 ? "collections/1419-filmy-hbo"
                 : "collections/639-serialy-hbo");
@@ -234,7 +234,7 @@ public class ProducerRepo {
 
     Producer disney() {
         return new Producer(
-                "Дисней",
+                "Подборки: Disney",
                 Objects.equals(sectionName, "Премьеры")
                 ? "collections/1075-filmy-disney"
                 : (Objects.equals(sectionName, "Сериалы")
@@ -244,7 +244,7 @@ public class ProducerRepo {
 
     Producer netflix() {
         return new Producer(
-                "Нетфликс",
+                "Подборки: Netflix",
                 Objects.equals(sectionName, "Премьеры")
                 ? "collections/834-filmy-netflix"
                 : (Objects.equals(sectionName, "Сериалы")

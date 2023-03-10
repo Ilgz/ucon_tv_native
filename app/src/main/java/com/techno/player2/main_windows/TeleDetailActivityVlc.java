@@ -309,7 +309,7 @@ public class TeleDetailActivityVlc extends AppCompatActivity {
 //                Toast.makeText(TeleDetailActivityVlc.this, "Не удалось воспроизвести", Toast.LENGTH_SHORT).show();
 //                return true;
 //            });
-        }, 3000);
+        }, flag?100:1000);
 
     }
 

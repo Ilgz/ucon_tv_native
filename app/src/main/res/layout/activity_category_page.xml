@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="13dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="13dp"
     android:background="@drawable/pokaz_background"
     tools:context=".main_windows.CategoryPage">
 
@@ -27,9 +31,9 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
-            android:layout_width="0dp"
+            android:layout_width="20dp"
             android:layout_height="1dp"
-            android:layout_weight="1" />
+            />
 
         <TextView
             android:id="@+id/tv_change_category"
@@ -38,8 +42,7 @@
             android:paddingHorizontal="60dp"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="15dp"
-
-            android:background="@drawable/button_background"
+            android:background="@drawable/stroke_background"
             android:focusable="true"
             android:paddingVertical="8dp"
             android:text="Категории"

@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="13dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingBottom="13dp"
     android:fillViewport="true"
     android:background="@drawable/background_home"
     tools:context=".main_windows.MainActivity">
@@ -36,7 +40,7 @@
         <ImageView
             android:id="@+id/toolbar_profile"
             android:focusable="true"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -69,49 +73,57 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Премьеры"
+        android:textStyle="bold"
         android:onClick="goToCategory"
         android:layout_marginTop="16dp"
         android:textAllCaps="true"
         android:textSize="18sp"
         android:layout_marginStart="16dp"
-        android:textColor="#ff3cdfff"
+        android:textColor="@color/for_titles_selector"
         android:background="@drawable/background_transparent_yellow"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="150dp"
+                android:scaleType="fitXY"
+                android:focusable="true"
+                android:padding="3dp"
+                android:layout_marginStart="16dp"
+                android:onClick="goToCategoryHD"
+                android:background="@drawable/background_transparent_yellow"
+                android:src="@drawable/hd_films"
+                android:layout_height="match_parent"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_premiers"
         android:layout_width="match_parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_height="wrap_content"/>
+        </LinearLayout>
+
     <TextView
         android:id="@+id/tv_channels"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
+
         android:textAllCaps="true"
         android:text="Телеканалы"
         android:layout_marginTop="16dp"
         android:textSize="18sp"
         android:layout_marginStart="16dp"
-        android:textColor="#ff3cdfff"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="150dp"
-            android:scaleType="fitXY"
-            android:focusable="true"
-            android:padding="3dp"
-            android:onClick="goToCategoryHD"
-            android:background="@drawable/background_transparent_yellow"
-            android:src="@drawable/hd_films"
-            android:layout_height="match_parent"/>
+        android:textColor="@color/for_titles_selector"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_channels"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    </LinearLayout>
+
     <TextView
         android:id="@+id/tv_cartoons"
         android:focusable="true"
@@ -124,8 +136,11 @@
         android:onClick="goToCategory"
 
         android:textSize="18sp"
+        android:textStyle="bold"
+
         android:layout_marginStart="16dp"
-        android:textColor="#ff3cdfff"
+        android:textColor="@color/for_titles_selector"
+
         android:background="@drawable/background_transparent_yellow"/>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -147,7 +162,9 @@
         android:layout_marginTop="16dp"
         android:textSize="18sp"
         android:layout_marginStart="16dp"
-        android:textColor="#ff3cdfff"
+        android:textColor="@color/for_titles_selector"
+        android:textStyle="bold"
+
         android:background="@drawable/background_transparent_yellow"/>
 
     <androidx.recyclerview.widget.RecyclerView

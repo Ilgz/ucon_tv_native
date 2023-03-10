@@ -1,6 +1,7 @@
 package com.techno.player2.main_windows;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,6 +23,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.techno.player2.R;
 import com.techno.player2.adapters.MovieAdapter;
+import com.techno.player2.auxi.Xhelper;
 import com.techno.player2.custom_interfaces.MovieItemClickList;
 import com.techno.player2.models.Movie;
 import com.techno.player2.utils.SpacingItemDecorator;
@@ -113,11 +115,19 @@ public class SearchPage extends AppCompatActivity implements MovieItemClickList 
 
     @Override
     public void OnMovieClick(Movie movie, ImageView movieImageView) {
-        Intent intent=new Intent(this,MoviePlayPage.class);
-        intent.putExtra("title",movie.getTitle());
-        intent.putExtra("poster",movie.getThumbnail());
-        intent.putExtra("details",movie.getDetails());
-        intent.putExtra("siteLink",movie.getSiteLink());
-        startActivity(intent);
+        SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.k_shared),MODE_PRIVATE);
+
+        boolean status = sharedPreferences.getBoolean("access", false);
+        if (!status) {
+            new Xhelper().DialogBuild(this);
+        }
+        else {
+            Intent intent = new Intent(this, MoviePlayPage.class);
+            intent.putExtra("title", movie.getTitle());
+            intent.putExtra("poster", movie.getThumbnail());
+            intent.putExtra("details", movie.getDetails());
+            intent.putExtra("siteLink", movie.getSiteLink());
+            startActivity(intent);
+        }
     }
 }

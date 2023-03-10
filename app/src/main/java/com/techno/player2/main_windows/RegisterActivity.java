@@ -42,11 +42,9 @@ public class RegisterActivity extends AppCompatActivity {
                 if (phone_number.length() < 11) {
                     Toast.makeText(this, "Заполните поле полностью", Toast.LENGTH_LONG).show();
                 } else {
-                    mGenerateBtn.setEnabled(false);
                     Intent intent = new Intent(RegisterActivity.this, OtpActivity.class);
                     intent.putExtra("phoneNumber",complete);
                     startActivity(intent);
-                    finish();
                 }
 
         });
@@ -54,7 +52,6 @@ public class RegisterActivity extends AppCompatActivity {
             Intent intent = new Intent(RegisterActivity.this, OtpActivity.class);
             intent.putExtra("phoneNumber","");
             startActivity(intent);
-            finish();
         });
 
     }

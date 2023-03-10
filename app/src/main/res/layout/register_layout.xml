@@ -217,6 +217,8 @@
                 android:paddingVertical="8dp"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="10dp"
+                android:focusable="true"
+
                 android:textAlignment="center"
                 android:background="@drawable/button_background"
                 android:textColor="@color/white_black"
@@ -229,6 +231,8 @@
                 android:layout_weight="2"
                 android:layout_margin="10dp"
                 android:textSize="18sp"
+                android:focusable="true"
+
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="10dp"
                 android:textAlignment="center"

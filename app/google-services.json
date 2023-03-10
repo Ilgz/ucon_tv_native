@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:359971297899:android:aafb33fe7fff1256c7ef2e",
         "android_client_info": {
-          "package_name": "com.techno.player2"
+          "package_name": "com.example.player2"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "359971297899-kb2jqjmqcnnovjqt9ijq2b6kd2ftvg7j.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.techno.player2",
+            "package_name": "com.example.player2",
             "certificate_hash": "efa543593b1e03ead030319adc59f7b78567fe1d"
           }
         },
@@ -26,8 +26,177 @@
           "client_id": "359971297899-st6o48fc0o6s9qbcte1r0pdtlfh4ug3g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.techno.player2",
+            "package_name": "com.example.player2",
             "certificate_hash": "90473426994ff8e5ad71d9a86fbc7b424b3d55ca"
+          }
+        },
+        {
+          "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSShDNDAShfbbtl_1Q4lcun-LSugqwZQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359971297899:android:9d9a80d97c1f87fbc7ef2e",
+        "android_client_info": {
+          "package_name": "com.example.ucontv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359971297899-agplg38s4b87k32a85si84prpf42fj4e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ucontv",
+            "certificate_hash": "efa543593b1e03ead030319adc59f7b78567fe1d"
+          }
+        },
+        {
+          "client_id": "359971297899-lc5o24i5rjvg3gemn401a3mnsqj1e2j7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ucontv",
+            "certificate_hash": "6aaf67e1e4d9c9525a6a74ce70d8ca2275f71051"
+          }
+        },
+        {
+          "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSShDNDAShfbbtl_1Q4lcun-LSugqwZQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359971297899:android:4b91140669852955c7ef2e",
+        "android_client_info": {
+          "package_name": "com.techno.androidtv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSShDNDAShfbbtl_1Q4lcun-LSugqwZQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359971297899:android:a0c84a58f654b03bc7ef2e",
+        "android_client_info": {
+          "package_name": "com.techno.androtv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSShDNDAShfbbtl_1Q4lcun-LSugqwZQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359971297899:android:d65e0219c0075745c7ef2e",
+        "android_client_info": {
+          "package_name": "com.techno.firebasetvandroidtv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSShDNDAShfbbtl_1Q4lcun-LSugqwZQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359971297899-5uhvnljbu99rtjt42etslfgdik31dmsi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359971297899:android:5fe03de94bdbe5afc7ef2e",
+        "android_client_info": {
+          "package_name": "com.techno.player2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359971297899-mrc0d86j44953jpar4fjhnbm74ta4su3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techno.player2",
+            "certificate_hash": "290de7c14815bb4aa3ea20fcee7f078411470755"
           }
         },
         {

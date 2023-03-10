@@ -30,6 +30,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.techno.player2.R;
 import com.techno.player2.adapters.MovieAdapter;
+import com.techno.player2.auxi.Xhelper;
 import com.techno.player2.custom_interfaces.CategoryItemClick;
 import com.techno.player2.custom_interfaces.MovieItemClickList;
 import com.techno.player2.data_source.ProducerRepo;
@@ -116,7 +117,6 @@ public class CategoryPage extends AppCompatActivity implements CategoryItemClick
         String categoryLink=(Objects.equals(category, "Мультфильмы") ?producerRepo.cartoonCategories().get(0).getLink():producerRepo.categories().get(0).getLink());
         currentLink=categoryLink;
         isLoading = true;
-        Log.d("Ilgiz","initial");
         if(Objects.equals(category,"Подборки")){
             SharedPreferences sharedPreferences=getSharedPreferences(getResources().getString(R.string.k_shared),MODE_PRIVATE);
             String link=sharedPreferences.getString("FilmUpdate","");
@@ -214,11 +214,18 @@ public class CategoryPage extends AppCompatActivity implements CategoryItemClick
 
     @Override
     public void OnMovieClick(Movie movie, ImageView movieImageView) {
-        Intent intent=new Intent(this,MoviePlayPage.class);
-        intent.putExtra("title",movie.getTitle());
-        intent.putExtra("poster",movie.getThumbnail());
-        intent.putExtra("details",movie.getDetails());
-        intent.putExtra("siteLink",movie.getSiteLink());
-        startActivity(intent);
+        SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.k_shared),MODE_PRIVATE);
+        boolean status = sharedPreferences.getBoolean("access", false);
+        if (!status) {
+            new Xhelper().DialogBuild(this);
+        }
+        else {
+            Intent intent = new Intent(this, MoviePlayPage.class);
+            intent.putExtra("title", movie.getTitle());
+            intent.putExtra("poster", movie.getThumbnail());
+            intent.putExtra("details", movie.getDetails());
+            intent.putExtra("siteLink", movie.getSiteLink());
+            startActivity(intent);
+        }
     }
 }
