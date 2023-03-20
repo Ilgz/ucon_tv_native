@@ -114,10 +114,12 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
         initRecyclers();
         loadData();
         SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
+        System.out.println(sharedPreferences.getString("Slider","llll"));
         System.out.println(sharedPreferences.getBoolean("access",false));
     }
 
     private void slideInitialization() {
+
          sliderPager = findViewById(R.id.slider);
         slideList = new ArrayList<>();
         sliderPager.setPadding(300, 0, 300, 0);
@@ -129,7 +131,8 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
         timer.scheduleAtFixedRate(sliderTimer, 16000, 20000);
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         SliderPageAdapter adapter = new SliderPageAdapter(this, slideList);
-        JsonArrayRequest requesting = new JsonArrayRequest(Request.Method.GET, "https://www.jsonkeeper.com/b/1Q9X", null, response -> {
+        SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
+        JsonArrayRequest requesting = new JsonArrayRequest(Request.Method.GET, sharedPreferences.getString("Slider","https://www.jsonkeeper.com/b/1Q9X"), null, response -> {
             for (int i = 0; i < response.length(); i++) {
                 try {
                     JSONObject jsonObject = response.getJSONObject(i);
@@ -139,8 +142,6 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
                     String site = jsonObject.getString("site");
                     slideList.add(new Slide(image, name,poster,site));
                 } catch (JSONException e) {
-                    Log.d("Ilgiz", e.toString());
-
                     e.printStackTrace();
                 }
 

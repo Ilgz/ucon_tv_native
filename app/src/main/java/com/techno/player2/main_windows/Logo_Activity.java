@@ -106,6 +106,8 @@ public class Logo_Activity extends AppCompatActivity {
 
 
                 } catch (JSONException e) {
+                    System.out.println("JsonError");
+                    System.out.println(e.toString());
                     e.printStackTrace();
                 }
 
@@ -127,11 +129,14 @@ public class Logo_Activity extends AppCompatActivity {
 
     private void getJson(String url, String sharedName) {
         String newUrl = (url.contains("www")) ? url : url.replace("https://", "https://www.");
+        System.out.println(newUrl);
         JsonArrayRequest requesting = new JsonArrayRequest(Request.Method.GET, newUrl, null, response -> {
             SharedPreferences.Editor sharedEditor = sharedPreferences.edit();
             sharedEditor.putString(sharedName, response.toString());
             sharedEditor.apply();
         }, error -> {
+
+            error.printStackTrace();
             System.out.println("ILGIZ" + "Errror");
         });
         requestQueue.add(requesting);

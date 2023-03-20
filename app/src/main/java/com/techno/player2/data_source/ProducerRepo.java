@@ -160,7 +160,7 @@ public class ProducerRepo {
     }
     Producer categoryBiography() {
         return new Producer(
-                "Криминал",
+                "Биография",
                 Objects.equals(sectionName, "Премьеры")
                         ? "films/biographical"
                         : (Objects.equals(sectionName, "Сериалы")
