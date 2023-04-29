@@ -100,26 +100,26 @@
         android:layout_height="wrap_content"/>
         </LinearLayout>
 
-    <TextView
-        android:id="@+id/tv_channels"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
+<!--    <TextView-->
+<!--        android:id="@+id/tv_channels"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textStyle="bold"-->
 
-        android:textAllCaps="true"
-        android:text="Телеканалы"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp"
-        android:layout_marginStart="16dp"
-        android:textColor="@color/for_titles_selector"
-        />
+<!--        android:textAllCaps="true"-->
+<!--        android:text="Телеканалы"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:textColor="@color/for_titles_selector"-->
+<!--        />-->
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_channels"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_channels"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
 
     <TextView
         android:id="@+id/tv_cartoons"

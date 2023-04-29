@@ -246,10 +246,10 @@ public class MainActivity extends AppCompatActivity implements MovieItemClickLis
         rvPremiers.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         rvPremiers.addItemDecoration(vertical);
 rvPremiers.setAdapter(movieAdapter);
-        RecyclerView rvChannels = findViewById(R.id.rv_channels);
-        rvChannels.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.HORIZONTAL, false));
-        TeleAdapter teleAdapter = new TeleAdapter(this, DataSourceTVChannelsAll.getChannels());
-        rvChannels.setAdapter(teleAdapter);
+//        RecyclerView rvChannels = findViewById(R.id.rv_channels);
+//        rvChannels.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.HORIZONTAL, false));
+//        TeleAdapter teleAdapter = new TeleAdapter(this, DataSourceTVChannelsAll.getChannels());
+//        rvChannels.setAdapter(teleAdapter);
         rvCartoons = findViewById(R.id.rv_cartoons);
         rvCartoons.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         rvCartoons.addItemDecoration(vertical);
