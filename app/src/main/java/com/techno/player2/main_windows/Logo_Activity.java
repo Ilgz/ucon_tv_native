@@ -175,10 +175,9 @@ public class Logo_Activity extends AppCompatActivity {
                             editor1.apply();
                             double Remnant;
                             if (date == 1) {
-                                Remnant = 200;
-
+                                Remnant = 300;
                             } else {
-                                Remnant = LeftDays * 6.5;
+                                Remnant = LeftDays *13;
                             }
                             int_my_balance = int_my_balance - Remnant;
                             if (int_my_balance >= 0) {
