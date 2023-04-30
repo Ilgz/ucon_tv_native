@@ -32,6 +32,7 @@ public class Logo_Activity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
         phone = sharedPreferences.getString("phone", "null");
         phone = phone.replace(" ", "");
+
         preFireLoading();
     }
 
@@ -121,10 +122,17 @@ public class Logo_Activity extends AppCompatActivity {
             Intent intent = new Intent(Logo_Activity.this, MainActivity.class);
             intent.putExtra("Portal", "agree");
             startActivity(intent);
+            finish();
         } else {
-            startActivity(new Intent(Logo_Activity.this, RegisterActivity.class));
+            SharedPreferences preferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
+            SharedPreferences.Editor editor1 = preferences.edit();
+            editor1.putInt("vps", 2);
+            editor1.putString("phone", "996999999999");
+            editor1.putString("status", "trial");
+            editor1.apply();
+            recreate();
+            //startActivity(new Intent(Logo_Activity.this, RegisterActivity.class));
         }
-        finish();
     }
 
     private void getJson(String url, String sharedName) {
