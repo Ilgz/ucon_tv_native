@@ -12,8 +12,8 @@ android {
         applicationId "com.techno.player2"
         minSdkVersion 23
         targetSdkVersion 33
-        versionCode 46
-        versionName "5.2.1"
+        versionCode 48
+        versionName "5.2.3"
         vectorDrawables.useSupportLibrary = true
         resConfigs "ru"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
