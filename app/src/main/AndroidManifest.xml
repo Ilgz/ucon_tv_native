@@ -56,6 +56,9 @@
             android:name=".main_windows.RegisterActivity"
             android:exported="false" />
         <activity
+            android:name=".main_windows.RegisterPrivateActivity"
+            android:exported="false" />
+        <activity
             android:name=".main_windows.Logo_Activity"
             android:exported="true"
             android:noHistory="true">

@@ -49,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         });
         findViewById(R.id.buttonVPS).setOnClickListener(v->{
-            Intent intent = new Intent(RegisterActivity.this, OtpActivity.class);
+            Intent intent = new Intent(RegisterActivity.this, RegisterPrivateActivity.class);
             intent.putExtra("phoneNumber","");
             startActivity(intent);
         });

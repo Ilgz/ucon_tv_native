@@ -148,7 +148,6 @@ public class Logo_Activity extends AppCompatActivity {
             try {
                 TrueTime.build().initialize();
                 int date = TrueTime.now().getDate();
-                System.out.println(TrueTime.now());
                 int month = TrueTime.now().getMonth();
                 String MonthString = String.valueOf(month);
                 Calendar mycal = new GregorianCalendar(TrueTime.now().getYear() + 1900, month, 1);

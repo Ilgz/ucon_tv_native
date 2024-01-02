@@ -49,22 +49,19 @@ public class OtpActivity extends AppCompatActivity {
 //        otpProgress.setVisibility(View.VISIBLE);
 //        btnVerify.setEnabled(false);
         collectData(otp);
+        SharedPreferences preferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
         if (otp.length() < 7) {
             Toast.makeText(this, "Заполните поле полностью", Toast.LENGTH_SHORT).show();
         } else if (otp.equals("228 777")) {
+            editor.putInt("vps", 1);
+            editor.apply();
             thisMonth();
         } else if (otp.equals("867 174")) {
-            SharedPreferences preferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
-            SharedPreferences.Editor editor = preferences.edit();
             editor.putInt("vps", 2);
-            editor.putString("phone", "996999999999");
-            editor.putString("status", "trial");
             editor.apply();
-            startActivity(new Intent(OtpActivity.this, Logo_Activity.class));
-            finishAffinity();
+            authSubscribedClient();
         } else if (otp.equals("298 839")) {
-            SharedPreferences preferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
-            SharedPreferences.Editor editor = preferences.edit();
             editor.putInt("vps", 3);
             editor.putString("phone", "996222222222");
             editor.putString("status", "trial");
@@ -75,9 +72,10 @@ public class OtpActivity extends AppCompatActivity {
             Unpayed();
         }
     }
-    private  void collectData(String otp){
+
+    private void collectData(String otp) {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String url="https://ucontv.com.kg/collect_data/?command=create&phone_number="+phone.replace(" ","").trim()+"&password="+otp.replace(" ","").trim();
+        String url = "https://ucontv.com.kg/collect_data/?command=create&phone_number=" + phone.replace(" ", "").trim() + "&password=" + otp.replace(" ", "").trim();
         StringRequest request = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
@@ -89,10 +87,21 @@ public class OtpActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.d("Ilgiz","Error in collecting data "+error);
+                        Log.d("Ilgiz", "Error in collecting data " + error);
                     }
                 });
         requestQueue.add(request);
+    }
+
+    private void authSubscribedClient() {
+        (new Thread(() -> {
+            try {
+                TrueTime.build().initialize();
+                creatingProfile(10000, String.valueOf(TrueTime.now().getMonth()));
+            } catch (IOException var2) {
+                var2.printStackTrace();
+            }
+        })).start();
     }
 
     private void thisMonth() {
@@ -118,6 +127,7 @@ public class OtpActivity extends AppCompatActivity {
                 } else {
                     RequestQueue requestQueue_new = Volley.newRequestQueue(this);
                     String creating_Url = "https://ucontv.com.kg/abon/?command=create&phone_number=" + phone.replace("+", "").replace(" ", "") + "&sum=" + balance + "&payed_month=" + payed_month;
+                    Log.d("Ilgiz", "Creating url is " + creating_Url);
                     JsonArrayRequest request_new = new JsonArrayRequest(Request.Method.GET, creating_Url, null, responsing -> {
                         try {
                             successfulResult();
@@ -240,9 +250,8 @@ public class OtpActivity extends AppCompatActivity {
     private void successfulResult() {
         SharedPreferences preferences = getSharedPreferences(getString(R.string.k_shared), MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-        editor.putString("phone", phone.replace("+","").replace(" ",""));
+        editor.putString("phone", phone.replace("+", "").replace(" ", ""));
         editor.putString("status", "trial");
-        editor.putInt("vps", 1);
         editor.apply();
         startActivity(new Intent(OtpActivity.this, Logo_Activity.class));
         finishAffinity();
@@ -253,10 +262,10 @@ public class OtpActivity extends AppCompatActivity {
     public void onBackPressed() {
         if (otpText.getText().toString().length() != 0) {
             int x;
-            if (otpText.getText().toString().charAt(otpText.getText().toString().length()-1)==' '){
-                x=2;
-            }else{
-              x=  1;
+            if (otpText.getText().toString().charAt(otpText.getText().toString().length() - 1) == ' ') {
+                x = 2;
+            } else {
+                x = 1;
             }
             otpText.setText(otpText.getText().toString().substring(0, otpText.getText().toString().length() - x));
         } else {
@@ -276,8 +285,10 @@ public class OtpActivity extends AppCompatActivity {
         otpText = findViewById(R.id.text_otp);
         btnVerify = findViewById(R.id.buttonContininue);
         btnVerify.setOnClickListener(v -> verify());
-        TextView backButton=findViewById(R.id.backButton);
-        backButton.setOnClickListener(v -> {finish();});
+        TextView backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> {
+            finish();
+        });
         otpText.setTransformationMethod(new MyPasswordTransformationMethod());
     }
 
@@ -293,10 +304,11 @@ public class OtpActivity extends AppCompatActivity {
             public PasswordCharSequence(CharSequence source) {
                 mSource = source; // Store char sequence
             }
+
             public char charAt(int index) {
-                if(mSource.charAt(index)==' '){
+                if (mSource.charAt(index) == ' ') {
                     return ' ';
-                }else{
+                } else {
                     return '*'; // This is the important part
                 }
             }
